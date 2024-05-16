@@ -1,0 +1,18 @@
+ftpdts:
+  ports:
+    - "21:2001"
+    - "2000:2000"
+    - "39300-39500:39300-39500"
+
+  image: starshiptroopers/ftpdts
+
+  container_name: ftpdts
+
+  tty: true
+  stdin_open: true
+  restart: always
+
+  volumes:
+  - ./config/:/opt/ftpdts/config/
+  - ./tmpl/:/opt/ftpdts/tmpl/
+  - ./logs/:/opt/ftpdts/logs/

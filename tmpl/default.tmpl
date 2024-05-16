@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!-- This is a simple redirect page used to escape from the Facebook, Facebook Messenger and Instagram in-app browsers on IOS devices -->
+<html lang="en">
+<head>
+    <title>{{.Title}}</title>
+</head>
+<body>
+    <h1>{{.Caption}}</h1>
+    <script>
+        window.location.href = "{{toJSStr .Url}}"
+    </script>
+</body>
+</html>
